@@ -26,8 +26,10 @@ export default {
   },
   methods: {
     tambahkan(todo) {
-      this.listTodo.push(todo);
-      this.todo = "";
+      if (todo != "") {
+        this.listTodo.push(todo);
+        this.todo = "";
+      }
     },
   },
 };
